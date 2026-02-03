@@ -1,36 +1,63 @@
 {
   "name": "Garry Chiao",
   "headline": "Full‑stack artisan",
-  "location": "Taipei, Taiwan",
+  "location": "Taiwan",
+  "summary": "Skilled and collaborative web developer with 7+ years of experience in developing effective solutions to complex problems using a combination of technical expertise and a user-centered approach to deliver systems and web pages.",
   "experience": [
     {
-      "company": "(Add company)",
-      "role": "(Add role)",
-      "period": "YYYY — YYYY",
+      "company": "Full-Stack-Artisan Inc.",
+      "role": "CEO",
+      "period": "Sep 2021 — Present",
+      "location": "Taiwan",
+      "bullets": [
+        "Lead a freelance company of six members with extensive experience in web development locally and abroad.",
+        "Manage interactions between clientele and the team to deliver custom solutions addressing specific needs.",
+        "Build and maintain strong relationships with clients and stakeholders.",
+        "Ensure systems meet high standards of quality and usability through a hands-on approach."
+      ]
+    },
+    {
+      "company": "GreenPeace TW",
+      "role": "Front-End Developer",
+      "period": "Jun 2017 — Present",
       "location": "",
       "bullets": [
-        "Built and shipped web products end‑to‑end.",
-        "Owned UI, API integration, and deployment."
+        "Collaborate with a team to develop campaign strategies and messaging for supporters and donors.",
+        "Manage contact lists and track engagement metrics to ensure outreach is effective and well-targeted."
+      ]
+    },
+    {
+      "company": "TimesMarketing",
+      "role": "Full Stack Developer",
+      "period": "Jun 2017 — Aug 2021",
+      "location": "",
+      "bullets": [
+        "Proficient web and blockchain developer (Vue.js, Node.js, Solidity, GCP services).",
+        "Create high-quality, user-focused applications that solve real and virtual world problems."
       ]
     }
   ],
   "skills": [
-    "JavaScript/TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Firebase",
-    "GCP"
+    "JavaScript (React, Vue, Node)",
+    "Solidity",
+    "GCP",
+    "SQL",
+    "Git",
+    "Agile",
+    "Scrum",
+    "SaaS",
+    "eCommerce"
   ],
   "education": [
     {
-      "school": "(Add school)",
-      "degree": "(Add degree)",
-      "period": ""
+      "school": "National Central University (國立中央大學)",
+      "degree": "B.A., Management Information Systems",
+      "period": "2012 — 2016"
     }
   ],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/garrychiao" },
-    { "label": "Email", "url": "mailto:you@example.com" }
+    { "label": "Email", "url": "mailto:garry.chiao@full-stack-artisan.com" },
+    { "label": "Phone", "url": "tel:+886958283083" },
+    { "label": "GitHub", "url": "https://github.com/garrychiao" }
   ]
 }

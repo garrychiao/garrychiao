@@ -1,36 +1,63 @@
 {
   "name": "Garry Chiao",
   "headline": "全端工程師",
-  "location": "台北, 台灣",
+  "location": "台灣",
+  "summary": "具備 7+ 年網頁開發經驗，善於以技術與使用者導向思維解決複雜問題，交付高品質的系統與網站。",
   "experience": [
     {
-      "company": "（填公司）",
-      "role": "（填職稱）",
-      "period": "YYYY — YYYY",
+      "company": "Full-Stack-Artisan Inc.",
+      "role": "CEO",
+      "period": "2021/09 — 現在",
+      "location": "台灣",
+      "bullets": [
+        "帶領 6 人自由接案團隊，具備國內外多元開發經驗。",
+        "對接客戶需求並與團隊協作，交付符合需求的客製化解決方案。",
+        "維繫客戶與利害關係人關係，確保溝通順暢。",
+        "以 hands-on 方式把關品質與可用性，確保系統達到高標準。"
+      ]
+    },
+    {
+      "company": "GreenPeace TW",
+      "role": "前端工程師",
+      "period": "2017/06 — 現在",
       "location": "",
       "bullets": [
-        "負責產品從前端到後端的端到端交付。",
-        "包含 UI、API 串接、部署與維運。"
+        "與團隊合作規劃倡議活動策略與訊息，提升對支持者與捐款者的溝通成效。",
+        "管理聯絡人名單並追蹤互動指標，優化投放與觸達精準度。"
+      ]
+    },
+    {
+      "company": "TimesMarketing",
+      "role": "全端工程師",
+      "period": "2017/06 — 2021/08",
+      "location": "",
+      "bullets": [
+        "熟悉 Vue.js、Node.js、Solidity 與 GCP 服務的網站與區塊鏈開發。",
+        "打造以使用者為中心的高品質產品，解決真實與虛擬世界的問題。"
       ]
     }
   ],
   "skills": [
-    "JavaScript/TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Firebase",
-    "GCP"
+    "JavaScript（React / Vue / Node）",
+    "Solidity",
+    "GCP",
+    "SQL",
+    "Git",
+    "Agile",
+    "Scrum",
+    "SaaS",
+    "電商（eCommerce）"
   ],
   "education": [
     {
-      "school": "（填學校）",
-      "degree": "（填學位）",
-      "period": ""
+      "school": "國立中央大學（National Central University）",
+      "degree": "管理資訊系學士（MIS）",
+      "period": "2012 — 2016"
     }
   ],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/garrychiao" },
-    { "label": "Email", "url": "mailto:you@example.com" }
+    { "label": "Email", "url": "mailto:garry.chiao@full-stack-artisan.com" },
+    { "label": "Phone", "url": "tel:+886958283083" },
+    { "label": "GitHub", "url": "https://github.com/garrychiao" }
   ]
 }

@@ -1,5 +1,21 @@
 [
   {
+    "title": "Jobbly",
+    "summary": "Chrome extension + web platform helping overseas students in the U.S. manage resumes, find jobs, and track applications.",
+    "tags": ["Chrome Extension", "Web Platform"],
+    "url": "https://jobbly.io/",
+    "repo": "",
+    "screenshot": ""
+  },
+  {
+    "title": "TKKPT",
+    "summary": "Frontend for an international logistics resources integration platform (React). Integrated RESTful APIs and worked in weekly scrums.",
+    "tags": ["React", "REST API", "Scrum"],
+    "url": "",
+    "repo": "",
+    "screenshot": ""
+  },
+  {
     "title": "TzuChi — Project Collection",
     "summary": "A collection of web projects (events, info portal, map embeds) built with Next.js.",
     "tags": ["Next.js", "React", "GCP", "Firebase"],

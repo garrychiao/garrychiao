@@ -35,9 +35,15 @@ function applyI18nStrings(strings) {
   });
 }
 
-function renderProjects(projects, i18n) {
+function getAssetBase(lang) {
+  return lang === 'en' ? '../assets' : './assets';
+}
+
+function renderProjects(projects, i18n, lang) {
   const grid = $('#projectGrid');
   grid.innerHTML = '';
+
+  const assetBase = getAssetBase(lang);
 
   projects.forEach((p) => {
     const card = document.createElement('article');
@@ -47,7 +53,7 @@ function renderProjects(projects, i18n) {
     img.className = 'thumb';
     img.alt = p.title ? `${p.title} screenshot` : 'Project screenshot';
     img.loading = 'lazy';
-    img.src = p.screenshot || './assets/placeholder.svg';
+    img.src = p.screenshot || `${assetBase}/placeholder.svg`;
     img.addEventListener('click', () => openLightbox(img.src, p.title || ''));
 
     const body = document.createElement('div');
@@ -167,7 +173,7 @@ function initLightbox() {
     ]);
 
     applyI18nStrings(i18n);
-    renderProjects(projects, i18n);
+    renderProjects(projects, i18n, lang);
     renderResume(resume, i18n);
     renderContact(resume);
   } catch (err) {
