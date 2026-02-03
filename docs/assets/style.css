@@ -1,12 +1,13 @@
 :root{
-  --bg:#0b1020;
-  --panel:#111935;
-  --text:#e8ecff;
-  --muted:#b6c0ffcc;
-  --line:#243057;
-  --accent:#7c5cff;
-  --accent2:#2dd4bf;
-  --shadow: 0 12px 40px rgba(0,0,0,.35);
+  /* Warm theme (option 2): sand + caramel + terracotta */
+  --bg:#fbf6ef;
+  --panel:#ffffff;
+  --text:#1f1b16;
+  --muted:#6f6357;
+  --line:#eadfce;
+  --accent:#c26d2d;
+  --accent2:#b54a3a;
+  --shadow: 0 12px 40px rgba(17,12,8,.10);
 }
 
 *{box-sizing:border-box}
@@ -14,21 +15,23 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.25), transparent 60%),
-              radial-gradient(900px 500px at 80% 10%, rgba(45,212,191,.18), transparent 60%),
-              var(--bg);
+  background:
+    radial-gradient(1100px 620px at 15% 0%, rgba(194,109,45,.22), transparent 60%),
+    radial-gradient(900px 520px at 85% 10%, rgba(181,74,58,.14), transparent 60%),
+    radial-gradient(1200px 700px at 50% 110%, rgba(194,109,45,.10), transparent 60%),
+    var(--bg);
   color:var(--text);
 }
 
 a{color:inherit}
-code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35rem}
+code{background:rgba(194,109,45,.10); padding:.15rem .35rem; border-radius:.35rem}
 
 .container{max-width:1040px; margin:0 auto; padding:0 20px}
 
 .site-header{
   position:sticky; top:0; z-index:10;
   backdrop-filter: blur(10px);
-  background: rgba(11,16,32,.65);
+  background: rgba(251,246,239,.75);
   border-bottom:1px solid var(--line);
 }
 .site-header .container{
@@ -39,8 +42,8 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
 .avatar{
   width:44px; height:44px; border-radius:14px;
   display:grid; place-items:center;
-  background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(45,212,191,.85));
-  color:#09102a; font-weight:800;
+  background: linear-gradient(135deg, rgba(194,109,45,.95), rgba(181,74,58,.9));
+  color:#fff; font-weight:800;
 }
 .brand h1{font-size:1rem; margin:0}
 .brand p{margin:0}
@@ -58,15 +61,15 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
   display:inline-flex; align-items:center; justify-content:center;
   padding:10px 14px; border-radius:12px;
   text-decoration:none; font-weight:700;
-  background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(45,212,191,.75));
-  color:#0b1020;
+  background: linear-gradient(135deg, rgba(194,109,45,.95), rgba(181,74,58,.9));
+  color:#fff;
 }
 .btn-ghost{
-  background: transparent;
+  background: rgba(255,255,255,.40);
   border:1px solid var(--line);
   color:var(--text);
 }
-.btn-ghost:hover{border-color:rgba(124,92,255,.65)}
+.btn-ghost:hover{border-color:rgba(194,109,45,.55)}
 
 .section{padding:34px 0}
 .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:14px}
@@ -87,11 +90,11 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
   cursor:pointer;
   font-weight:700;
 }
-.tab:hover{color:var(--text); border-color:rgba(124,92,255,.65)}
+.tab:hover{color:var(--text); border-color:rgba(194,109,45,.55)}
 .tab.active{
-  color:#0b1020;
+  color:#fff;
   border-color:transparent;
-  background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(45,212,191,.75));
+  background: linear-gradient(135deg, rgba(194,109,45,.95), rgba(181,74,58,.9));
 }
 
 .grid{
@@ -102,7 +105,7 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
 }
 .card{
   grid-column: span 6;
-  background: rgba(17,25,53,.75);
+  background: rgba(255,255,255,.72);
   border:1px solid var(--line);
   border-radius:16px;
   overflow:hidden;
@@ -141,7 +144,7 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
 
 .resume{
   margin-top:14px;
-  background: rgba(17,25,53,.75);
+  background: rgba(255,255,255,.72);
   border:1px solid var(--line);
   border-radius:16px;
   padding:16px;
@@ -160,7 +163,7 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
   padding:10px 12px;
   border-radius:999px;
   border:1px solid var(--line);
-  background: rgba(17,25,53,.75);
+  background: rgba(255,255,255,.72);
   text-decoration:none;
 }
 .pill span{color:var(--muted)}
@@ -175,10 +178,10 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
   border:none;
   border-radius:18px;
   padding:0;
-  background: rgba(10,12,24,.92);
-  color:var(--text);
+  background: rgba(28,24,20,.92);
+  color:#fff;
 }
-.lightbox::backdrop{ background: rgba(0,0,0,.6) }
+.lightbox::backdrop{ background: rgba(0,0,0,.55) }
 .lightbox img{width:100%; height:auto; display:block}
 .lightbox-caption{padding:12px 14px; color:var(--muted)}
 .lightbox-close{
