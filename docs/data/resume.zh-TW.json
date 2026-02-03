@@ -1,0 +1,36 @@
+{
+  "name": "Garry Chiao",
+  "headline": "全端工程師",
+  "location": "台北, 台灣",
+  "experience": [
+    {
+      "company": "（填公司）",
+      "role": "（填職稱）",
+      "period": "YYYY — YYYY",
+      "location": "",
+      "bullets": [
+        "負責產品從前端到後端的端到端交付。",
+        "包含 UI、API 串接、部署與維運。"
+      ]
+    }
+  ],
+  "skills": [
+    "JavaScript/TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Firebase",
+    "GCP"
+  ],
+  "education": [
+    {
+      "school": "（填學校）",
+      "degree": "（填學位）",
+      "period": ""
+    }
+  ],
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/garrychiao" },
+    { "label": "Email", "url": "mailto:you@example.com" }
+  ]
+}

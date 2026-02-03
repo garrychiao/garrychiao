@@ -13,7 +13,29 @@ async function fetchJson(path) {
   return res.json();
 }
 
-function renderProjects(projects) {
+function getLang() {
+  // GitHub Pages base path: /<repo>/
+  // We use /en/ for English, default zh-TW.
+  const p = window.location.pathname;
+  return p.includes('/en/') ? 'en' : 'zh-TW';
+}
+
+function applyI18nStrings(strings) {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (!key) return;
+    const parts = key.split('.');
+    let val = strings;
+    for (const k of parts) {
+      val = val?.[k];
+    }
+    if (typeof val === 'string' && val.trim()) {
+      el.textContent = val;
+    }
+  });
+}
+
+function renderProjects(projects, i18n) {
   const grid = $('#projectGrid');
   grid.innerHTML = '';
 
@@ -31,13 +53,16 @@ function renderProjects(projects) {
     const body = document.createElement('div');
     body.className = 'body';
 
+    const labelLive = i18n?.project?.live || 'Live';
+    const labelRepo = i18n?.project?.repo || 'Repo';
+
     body.innerHTML = `
       <h4>${escapeHtml(p.title)}</h4>
       <p>${escapeHtml(p.summary)}</p>
       <div class="tags">${(p.tags||[]).map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
       <div class="actions">
-        ${p.url ? `<a class="action" target="_blank" rel="noreferrer" href="${escapeHtml(p.url)}">Live</a>` : ''}
-        ${p.repo ? `<a class="action" target="_blank" rel="noreferrer" href="${escapeHtml(p.repo)}">Repo</a>` : ''}
+        ${p.url ? `<a class="action" target="_blank" rel="noreferrer" href="${escapeHtml(p.url)}">${escapeHtml(labelLive)}</a>` : ''}
+        ${p.repo ? `<a class="action" target="_blank" rel="noreferrer" href="${escapeHtml(p.repo)}">${escapeHtml(labelRepo)}</a>` : ''}
       </div>
     `;
 
@@ -47,7 +72,7 @@ function renderProjects(projects) {
   });
 }
 
-function renderResume(resume) {
+function renderResume(resume, i18n) {
   const block = $('#resumeBlock');
 
   const exp = (resume.experience || []).map((e) => {
@@ -70,19 +95,23 @@ function renderResume(resume) {
     </div>
   `).join('');
 
+  const labelExp = i18n?.resume?.experience || 'Experience';
+  const labelSkills = i18n?.resume?.skills || 'Skills';
+  const labelEdu = i18n?.resume?.education || 'Education';
+
   block.innerHTML = `
     <div class="block">
-      <h4>Experience</h4>
+      <h4>${escapeHtml(labelExp)}</h4>
       ${exp || '<div class="muted">(add items in resume.json)</div>'}
     </div>
 
     <div class="block">
-      <h4>Skills</h4>
+      <h4>${escapeHtml(labelSkills)}</h4>
       <div class="tags">${skills || '<span class="muted">(add skills in resume.json)</span>'}</div>
     </div>
 
     <div class="block">
-      <h4>Education</h4>
+      <h4>${escapeHtml(labelEdu)}</h4>
       ${edu || '<div class="muted">(add education in resume.json)</div>'}
     </div>
   `;
@@ -127,13 +156,19 @@ function initLightbox() {
   $('#year').textContent = String(new Date().getFullYear());
   initLightbox();
 
+  const lang = getLang();
+
   try {
-    const [projects, resume] = await Promise.all([
-      fetchJson('./data/projects.json'),
-      fetchJson('./data/resume.json'),
+    const base = lang === 'en' ? '../data' : './data';
+    const [i18n, projects, resume] = await Promise.all([
+      fetchJson(`${base}/i18n.${lang}.json`),
+      fetchJson(`${base}/projects.${lang}.json`),
+      fetchJson(`${base}/resume.${lang}.json`),
     ]);
-    renderProjects(projects);
-    renderResume(resume);
+
+    applyI18nStrings(i18n);
+    renderProjects(projects, i18n);
+    renderResume(resume, i18n);
     renderContact(resume);
   } catch (err) {
     console.error(err);

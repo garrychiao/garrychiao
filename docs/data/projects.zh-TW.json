@@ -1,0 +1,18 @@
+[
+  {
+    "title": "慈濟系列 — 專案集合",
+    "summary": "包含活動頁、資訊網、地圖嵌入等多個 Next.js 專案的整理與呈現。",
+    "tags": ["Next.js", "React", "GCP", "Firebase"],
+    "url": "https://community.tzuchi.org/",
+    "repo": "",
+    "screenshot": ""
+  },
+  {
+    "title": "BillyKingShop",
+    "summary": "Steam 物品庫、翻譯表、上架流程等電商輔助工具。",
+    "tags": ["React", "Firebase", "Google Sheets"],
+    "url": "",
+    "repo": "",
+    "screenshot": ""
+  }
+]
