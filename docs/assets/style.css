@@ -110,6 +110,16 @@ code{background:rgba(194,109,45,.10); padding:.15rem .35rem; border-radius:.35re
   border-radius:16px;
   overflow:hidden;
   box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  will-change: transform;
+}
+.card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(194,109,45,.45);
+  box-shadow: 0 18px 55px rgba(17,12,8,.16);
+}
+.card:hover .thumb{
+  filter: saturate(1.06) contrast(1.03);
 }
 .card .thumb{
   aspect-ratio: 16/9;
@@ -117,6 +127,7 @@ code{background:rgba(194,109,45,.10); padding:.15rem .35rem; border-radius:.35re
   display:block;
   width:100%;
   object-fit:cover;
+  transition: filter .18s ease, transform .18s ease;
 }
 .card .body{padding:14px 14px 16px}
 .card h4{margin:0 0 6px; font-size:1rem}
