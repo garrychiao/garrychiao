@@ -1,19 +1,18 @@
 {
   "name": "Garry Chiao",
-  "headline": "全端工程師",
+  "headline": "自由接案全端工程師",
   "location": "台灣",
-  "summary": "具備 7+ 年網頁開發經驗，善於以技術與使用者導向思維解決複雜問題，交付高品質的系統與網站。",
+  "summary": "具備 7+ 年網頁開發經驗，擅長以使用者導向與工程思維解決複雜問題，從 UI、串接到部署維運皆可端到端交付。",
   "experience": [
     {
-      "company": "Full-Stack-Artisan Inc.",
-      "role": "CEO",
+      "company": "自由接案",
+      "role": "全端工程師（慈濟網站翻新）",
       "period": "2021/09 — 現在",
       "location": "台灣",
       "bullets": [
-        "帶領 6 人自由接案團隊，具備國內外多元開發經驗。",
-        "對接客戶需求並與團隊協作，交付符合需求的客製化解決方案。",
-        "維繫客戶與利害關係人關係，確保溝通順暢。",
-        "以 hands-on 方式把關品質與可用性，確保系統達到高標準。"
+        "負責多個慈濟網站專案翻新與維護（Next.js/React），強化效能、可用性與可維護性。",
+        "與利害關係人密切溝通需求，採迭代方式持續交付與優化。",
+        "端到端負責 UI 實作、API 串接、部署與後續維運。"
       ]
     },
     {
@@ -38,15 +37,15 @@
     }
   ],
   "skills": [
-    "JavaScript（React / Vue / Node）",
-    "Solidity",
+    "JavaScript/TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Firebase",
     "GCP",
     "SQL",
     "Git",
-    "Agile",
-    "Scrum",
-    "SaaS",
-    "電商（eCommerce）"
+    "Agile / Scrum"
   ],
   "education": [
     {

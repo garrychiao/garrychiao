@@ -1,52 +1,51 @@
 {
   "name": "Garry Chiao",
-  "headline": "Full‑stack artisan",
+  "headline": "Freelance Full‑Stack Engineer",
   "location": "Taiwan",
-  "summary": "Skilled and collaborative web developer with 7+ years of experience in developing effective solutions to complex problems using a combination of technical expertise and a user-centered approach to deliver systems and web pages.",
+  "summary": "Skilled and collaborative web developer with 7+ years of experience delivering user-centered web systems end-to-end — from UI and integrations to deployment and maintenance.",
   "experience": [
     {
-      "company": "Full-Stack-Artisan Inc.",
-      "role": "CEO",
+      "company": "Freelance",
+      "role": "Full‑Stack Engineer (Tzu Chi Web Revamp)",
       "period": "Sep 2021 — Present",
       "location": "Taiwan",
       "bullets": [
-        "Lead a freelance company of six members with extensive experience in web development locally and abroad.",
-        "Manage interactions between clientele and the team to deliver custom solutions addressing specific needs.",
-        "Build and maintain strong relationships with clients and stakeholders.",
-        "Ensure systems meet high standards of quality and usability through a hands-on approach."
+        "Modernize and maintain multiple Tzu Chi web properties (Next.js/React) with a focus on performance, usability, and maintainability.",
+        "Work closely with stakeholders to clarify requirements and deliver iterative improvements.",
+        "Own end‑to‑end delivery including UI implementation, API integration, deployment, and ongoing operations."
       ]
     },
     {
       "company": "GreenPeace TW",
-      "role": "Front-End Developer",
+      "role": "Front‑End Developer",
       "period": "Jun 2017 — Present",
       "location": "",
       "bullets": [
         "Collaborate with a team to develop campaign strategies and messaging for supporters and donors.",
-        "Manage contact lists and track engagement metrics to ensure outreach is effective and well-targeted."
+        "Manage contact lists and track engagement metrics to ensure outreach is effective and well‑targeted."
       ]
     },
     {
       "company": "TimesMarketing",
-      "role": "Full Stack Developer",
+      "role": "Full‑Stack Developer",
       "period": "Jun 2017 — Aug 2021",
       "location": "",
       "bullets": [
         "Proficient web and blockchain developer (Vue.js, Node.js, Solidity, GCP services).",
-        "Create high-quality, user-focused applications that solve real and virtual world problems."
+        "Create high‑quality, user‑focused applications that solve real and virtual world problems."
       ]
     }
   ],
   "skills": [
-    "JavaScript (React, Vue, Node)",
-    "Solidity",
+    "JavaScript/TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Firebase",
     "GCP",
     "SQL",
     "Git",
-    "Agile",
-    "Scrum",
-    "SaaS",
-    "eCommerce"
+    "Agile/Scrum"
   ],
   "education": [
     {
