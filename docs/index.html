@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Garry Chiao — Portfolio</title>
+  <meta name="description" content="Garry Chiao — personal gallery and resume" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="icon" href="./assets/placeholder.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">GC</div>
+        <div>
+          <h1>Garry Chiao</h1>
+          <p class="muted">Full‑stack artisan · product + engineering</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Hi, I’m Garry.</h2>
+      <p>
+        I build web products end‑to‑end — from UI and data pipelines to deployment.
+        This page is generated from editable JSON data files.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="#resume">Read resume</a>
+      </div>
+      <p class="muted small">
+        Tip: edit <code>docs/data/projects.json</code> and <code>docs/data/resume.json</code> to update content.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h3>Projects</h3>
+        <p class="muted">Gallery cards + screenshots + links.</p>
+      </div>
+      <div id="projectGrid" class="grid"></div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="section-head">
+        <h3>Resume</h3>
+        <p class="muted">Experience, skills, education.</p>
+      </div>
+      <div id="resumeBlock" class="resume"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head">
+        <h3>Contact</h3>
+        <p class="muted">Links below (edit in resume.json).</p>
+      </div>
+      <div id="contactBlock" class="contact"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container muted small">
+      <span>© <span id="year"></span> Garry Chiao</span>
+      <span class="dot">·</span>
+      <a href="https://github.com/garrychiao/garrychiao" target="_blank" rel="noreferrer">Source</a>
+    </div>
+  </footer>
+
+  <dialog id="lightbox" class="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <img id="lightboxImg" alt="Project screenshot" />
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </dialog>
+
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
