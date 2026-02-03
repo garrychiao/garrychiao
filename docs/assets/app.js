@@ -39,6 +39,17 @@ function getAssetBase(lang) {
   return lang === 'en' ? '../assets' : './assets';
 }
 
+function resolveScreenshotPath(src, assetBase) {
+  const s = String(src || '').trim();
+  if (!s) return `${assetBase}/placeholder.svg`;
+  // absolute URL or absolute path
+  if (/^https?:\/\//i.test(s) || s.startsWith('/')) return s;
+  // normalize common relative patterns
+  if (s.startsWith('./assets/')) return `${assetBase}/${s.slice('./assets/'.length)}`;
+  if (s.startsWith('assets/')) return `${assetBase}/${s.slice('assets/'.length)}`;
+  return s;
+}
+
 function renderProjects(projects, i18n, lang) {
   const grid = $('#projectGrid');
   grid.innerHTML = '';
@@ -53,7 +64,7 @@ function renderProjects(projects, i18n, lang) {
     img.className = 'thumb';
     img.alt = p.title ? `${p.title} screenshot` : 'Project screenshot';
     img.loading = 'lazy';
-    img.src = p.screenshot || `${assetBase}/placeholder.svg`;
+    img.src = resolveScreenshotPath(p.screenshot, assetBase);
     img.addEventListener('click', () => openLightbox(img.src, p.title || ''));
 
     const body = document.createElement('div');
