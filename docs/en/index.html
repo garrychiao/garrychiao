@@ -47,7 +47,13 @@
 
     <section id="projects" class="section">
       <div class="section-head">
-        <h3 data-i18n="section.projects">Projects</h3>
+        <div>
+          <h3 data-i18n="section.projects">Projects</h3>
+          <div class="tabs" id="projectTabs">
+            <button class="tab" data-filter="tzuchi" data-i18n="projectsTabs.tzuchi">Tzu Chi</button>
+            <button class="tab" data-filter="other" data-i18n="projectsTabs.other">Other</button>
+          </div>
+        </div>
         <p class="muted" data-i18n="section.projectsHint">Gallery cards + screenshots + links.</p>
       </div>
       <div id="projectGrid" class="grid"></div>

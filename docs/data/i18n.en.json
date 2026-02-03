@@ -8,6 +8,7 @@
     "ctaResume": "Read resume",
     "tip": "Tip: edit docs/data/projects.*.json and docs/data/resume.*.json to update content."
   },
+  "projectsTabs": { "tzuchi": "Tzu Chi", "other": "Other" },
   "section": {
     "projects": "Projects",
     "projectsHint": "Gallery cards + screenshots + links.",

@@ -50,13 +50,56 @@ function resolveScreenshotPath(src, assetBase) {
   return s;
 }
 
-function renderProjects(projects, i18n, lang) {
+function setupProjectTabs(projects, i18n) {
+  const tabs = document.querySelectorAll('#projectTabs .tab');
+  if (!tabs.length) return { getFilter: () => null };
+
+  const labels = {
+    tzuchi: i18n?.projectsTabs?.tzuchi || 'Tzu Chi',
+    other: i18n?.projectsTabs?.other || 'Other',
+  };
+
+  const counts = {
+    tzuchi: projects.filter(p => (p.category || 'other') === 'tzuchi').length,
+    other: projects.filter(p => (p.category || 'other') !== 'tzuchi').length,
+  };
+
+  tabs.forEach((btn) => {
+    const key = btn.getAttribute('data-filter');
+    if (key && labels[key] != null) {
+      btn.textContent = `${labels[key]} (${counts[key] ?? 0})`;
+    }
+  });
+
+  let current = 'tzuchi';
+  const setActive = (key) => {
+    current = key;
+    tabs.forEach((b) => b.classList.toggle('active', b.getAttribute('data-filter') === key));
+  };
+
+  tabs.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-filter') || 'tzuchi';
+      setActive(key);
+      window.dispatchEvent(new CustomEvent('projects:filter', { detail: { filter: key } }));
+    });
+  });
+
+  setActive(current);
+  return { getFilter: () => current, setActive };
+}
+
+function renderProjects(projects, i18n, lang, filter) {
   const grid = $('#projectGrid');
   grid.innerHTML = '';
 
   const assetBase = getAssetBase(lang);
 
-  projects.forEach((p) => {
+  const list = (filter === 'tzuchi')
+    ? projects.filter(p => (p.category || 'other') === 'tzuchi')
+    : projects.filter(p => (p.category || 'other') !== 'tzuchi');
+
+  list.forEach((p) => {
     const card = document.createElement('article');
     card.className = 'card';
 
@@ -184,7 +227,15 @@ function initLightbox() {
     ]);
 
     applyI18nStrings(i18n);
-    renderProjects(projects, i18n, lang);
+
+    const tabs = setupProjectTabs(projects, i18n);
+    const render = (filter) => renderProjects(projects, i18n, lang, filter || tabs.getFilter() || 'tzuchi');
+    render();
+
+    window.addEventListener('projects:filter', (e) => {
+      render(e?.detail?.filter);
+    });
+
     renderResume(resume, i18n);
     renderContact(resume);
   } catch (err) {

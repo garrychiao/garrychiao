@@ -8,6 +8,7 @@
     "ctaResume": "看履歷",
     "tip": "提示：修改 docs/data/projects.*.json 與 docs/data/resume.*.json 就能更新內容。"
   },
+  "projectsTabs": { "tzuchi": "慈濟專案", "other": "其他專案" },
   "section": {
     "projects": "作品",
     "projectsHint": "卡片式作品集＋截圖＋連結。",

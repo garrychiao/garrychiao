@@ -72,6 +72,28 @@ code{background:rgba(255,255,255,.06); padding:.15rem .35rem; border-radius:.35r
 .section-head{display:flex; align-items:flex-end; justify-content:space-between; gap:14px}
 .section-head h3{margin:0; font-size:1.3rem}
 
+.tabs{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+.tab{
+  appearance:none;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  color: var(--muted);
+  padding:8px 10px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:700;
+}
+.tab:hover{color:var(--text); border-color:rgba(124,92,255,.65)}
+.tab.active{
+  color:#0b1020;
+  border-color:transparent;
+  background: linear-gradient(135deg, rgba(124,92,255,.9), rgba(45,212,191,.75));
+}
+
 .grid{
   margin-top:14px;
   display:grid;
