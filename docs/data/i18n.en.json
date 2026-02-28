@@ -3,7 +3,7 @@
   "nav": { "projects": "Projects", "resume": "Resume", "contact": "Contact" },
   "hero": {
     "title": "Hi, I’m Garry.",
-    "body": "I build web products end‑to‑end — from UI and data pipelines to deployment.",
+    "body": "I build products end‑to‑end: UI/UX implementation, backend APIs, database design, third‑party integrations, testing, performance tuning, and reliable cloud deployment with maintainable delivery workflows.", 
     "ctaProjects": "View projects",
     "ctaResume": "Read resume"
   },
